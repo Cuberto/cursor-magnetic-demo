@@ -1,0 +1,30 @@
+extends /_includes/layout
+
+block title
+    title Cuberto Cursor | Demo
+
+block content
+    .cb-demo
+        .cb-demo-content
+            .cb-demo-container
+                .cb-demo-items
+                    .cb-demo-row
+                        .cb-demo-item(data-cursor="-color-red")
+                            .cb-demo-item-title Set Color
+                            .cb-demo-item-text(data-cursor="-color-green") Any color via CSS class with #[b .setState('colorClass')] or #[b [data-cursor="colorClass"]] attribute
+                        .cb-demo-item(data-cursor-text="Hello!")
+                            .cb-demo-item-title Set Text
+                            .cb-demo-item-text Set text with #[b .setText('Text string')] or #[b [data-cursor-text="Text string"]] attribute
+                        .cb-demo-item(data-cursor="-opaque")
+                            .cb-demo-item-title Exclusion mode
+                            .cb-demo-item-text Exclusion or opaque mode with #[b .setState('-opaque')] or #[b [data-cursor="-opaque"]] attribute
+                    .cb-demo-row
+                        .cb-demo-item(data-cursor="-lg")
+                            .cb-demo-item-title Set size
+                            .cb-demo-item-text Any size via CSS class with #[b .setState('sizeClass')] or #[b [data-cursor="sizeClass"]] attribute
+                        .cb-demo-item(data-cursor="-exclusion -lg", data-cursor-stick="#cursor-stick-area")
+                            .cb-demo-item-title#cursor-stick-area Stick
+                            .cb-demo-item-text Set sticky cursor with #[b .setStick(element)] or #[b [data-cursor-stick="selector"]] attribute
+                        .cb-demo-item(data-magnetic, data-cursor="-opaque")
+                            .cb-demo-item-title Magnetic
+                            .cb-demo-item-text Magnetic via [data-magnetic] attribute and opaque style cursor
